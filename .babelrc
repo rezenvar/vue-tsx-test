@@ -1,0 +1,4 @@
+{
+	"presets": ["latest"],
+	"plugins": ["jsx-v-model","transform-vue-jsx"]
+}

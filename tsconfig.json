@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"module": "amd",
+		"target": "es5",
+		"jsx": "preserve",
+		"sourceMap": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"noEmitOnError": false,
+		"lib": [
+			"es2016",
+			"dom"
+		],
+		"moduleResolution": "node",
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"typeRoots": [
+			"./src/**/*",
+			"./typings/**/*",
+			"./node_modules/@types/**/*"
+		]
+	},
+	"include": [
+		"./src/**/*"
+	]
+}

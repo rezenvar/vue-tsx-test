@@ -1,0 +1,106 @@
+.todo-container {
+	width: 400px;
+	margin:  0 auto;
+	margin-top: 100px;
+	&__form {
+		width: 100%;
+		margin-bottom: 15px;
+	}
+}
+
+
+.todo-form {
+	display: flex;
+	height: 40px;
+	&__text-box {
+		width: 70%;
+		padding: 0 15px;
+		border: 1px solid #e2e2e2;
+		transition: 0.4s;
+		outline: none;
+		&:focus {
+			border-color: lighten(#078bd5, 15%);
+		}
+	}
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30%;
+		color: #fff;
+		background: #078bd5;
+		border: none;
+		outline: none;
+		cursor: pointer;
+		transition: 0.4s;
+		&--disabled {
+			opacity: 0.6;
+		}
+	}
+}
+.todo-list {
+	&__todo {
+		margin-bottom: 10px;
+	}
+}
+
+
+.todo {
+	display: flex;
+	align-items: center;
+	min-height: 50px;
+	border: 1px solid #e2e2e2;
+	font-size: 15px;
+	&__name {
+		width: 85%;
+		padding: 0 15px;
+		word-wrap: break-word;
+	}
+	&__edit {
+		display: block;
+		width: 85%;
+		height: 100%;
+		padding: 0 15px;
+		outline: none;
+		border: none;
+	}
+	&__checkbox-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 15%;
+	}
+	&__checkbox {
+		width: 20px;
+		height: 20px;
+		border: 1px solid #e2e2e2;
+		border-radius: 5px;
+		cursor: pointer;
+		&--checked {
+			position: relative;
+			&::after, &::before {
+				content: '';
+				position: absolute;
+				height: 2px;
+				background: #078bd5;
+			}
+			&::after {
+				width: 11px;
+				left: 7px;
+				top: 8px;
+				transform: rotate(-45deg);
+			}
+			&::before {
+				width: 8px;
+				left: 2px;
+				top: 10px;
+				transform: rotate(45deg);
+			}
+		}
+	}
+	&--completed &__name {
+		text-decoration: line-through;
+		font-style: italic;
+		opacity: 0.3;
+	}
+}
