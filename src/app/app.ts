@@ -4,6 +4,7 @@ import './../styles/main.scss';
 import { AppComponent } from './components/AppComponent';
 import { router } from './pages/app.routing';
 import { Services } from './service/Services';
+import { store } from './store/store';
 
 
 
@@ -21,8 +22,8 @@ if (!DEBUG) {
 
 export const appRoot = new Vue({
 	el: '#app',
-	mixins: [Services],
 	router,
+	store,
 	render: (h) => h(AppComponent)
 });
 

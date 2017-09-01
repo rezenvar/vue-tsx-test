@@ -6,8 +6,6 @@ import { AppService } from '../service/AppService';
 @Component
 export class AppComponent extends Vue {
 
-	@Inject('appService')
-	appService : AppService;
 
 	render(h) {
 		return (

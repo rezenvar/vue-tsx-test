@@ -9,8 +9,6 @@ import { TodoListComponent } from '../../components/TodoListComponent';
 @Component
 export class HomePage extends Vue {
 
-	@Inject('appService')
-	appService : AppService;
 
 	render(h) {
 		return (

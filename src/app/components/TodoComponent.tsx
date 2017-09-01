@@ -33,12 +33,16 @@ export class TodoComponent extends Vue {
 		}
 	}
 
+	onChangeName(event) {
+		this.$emit('change', { todo: this.todo,  name: event.target.value });
+	}
+
 	render(h) {
 		return (
 			<li class={`todo ${this.todo.completed && 'todo--completed'}`}>
 				
 				{this.todo.isEditing ?
-					<input class='todo__edit' ref='nameInput' onBlur={this.onToggleEdit} v-model={this.todo.name} /> 
+					<input class='todo__edit' ref='nameInput' onBlur={this.onToggleEdit} onChange={this.onChangeName} /> 
 					:
 					<div onClick={this.onToggleEdit} class='todo__name' >{this.todo.name}</div>
 				}

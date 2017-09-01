@@ -46,6 +46,7 @@
     "vue-template-compiler": "^2.4.2",
     "vue-template-loader": "^0.3.1",
     "vuex": "^2.3.1",
+    "vuex-class": "^0.2.0",
     "vuex-ts-decorators": "0.0.7",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1",
